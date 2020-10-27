@@ -2,13 +2,13 @@ import { HotkeyOptions, IHotkeyOptions } from './hotkey.options'
 import { Subject } from 'rxjs'
 import { Inject, Injectable } from '@angular/core'
 import { Hotkey } from './hotkey.model'
-import * as Mousetrap from 'mousetrap'
+import 'mousetrap'
 
 @Injectable()
 export class HotkeysService {
   hotkeys: Hotkey[] = []
   pausedHotkeys: Hotkey[] = []
-  mousetrap: Mousetrap.MousetrapInstance
+  mousetrap: MousetrapInstance
   cheatSheetToggle: Subject<any> = new Subject()
 
   private _preventIn = ['INPUT', 'SELECT', 'TEXTAREA']
